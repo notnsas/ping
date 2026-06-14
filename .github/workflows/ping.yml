@@ -14,4 +14,4 @@ jobs:
       - name: curl the url
         run: |
           echo "Pinging $URL"
-          curl {{ env.URL }}
+          curl "$URL"
