@@ -1,0 +1,17 @@
+name: ping
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  pinger_job:
+    name: A job to ping
+    runs-on: ubuntu-latest
+    env:
+      URL: ${{ secrets.URL }}
+    steps:
+      - name: curl the url
+        run: |
+          echo "Pinging $URL"
+          curl https://kerja-praktik-server.onrender.com/api/average-2026?roomId=350455
