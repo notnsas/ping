@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: curl the url
         run: |
-          echo "Pinging $URL"
+          echo "Pinging"
           curl "$URL"
